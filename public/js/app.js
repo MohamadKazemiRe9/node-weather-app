@@ -12,7 +12,7 @@ document.querySelector('.weatherForm').addEventListener('submit',(e)=>{
     document.querySelector('.city_table').textContent="LOADING...";
     document.querySelector('.temp_table').innerHTML="";
     document.querySelector('.status_table').innerHTML="";
-    fetch(`http://localhost:4000/weather?city=${city_name.value}`).then(res=>{
+    fetch(`/weather?city=${city_name.value}`).then(res=>{
         res.json().then(data=>{
             if(data.error){
                 alert(data.error);
