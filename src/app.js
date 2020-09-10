@@ -40,7 +40,7 @@ app.get('/weather', (req, res) => {
     if(!req.query.city){
         res.send({error:"please enter city name"})
     }
-    forecast("17785cb56b0843b5b6c187d97a87d969",req.query.city,(error,data)=>{
+    forecast("",req.query.city,(error,data)=>{
         if(error){
             res.send({
                 error
